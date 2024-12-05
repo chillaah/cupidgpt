@@ -1,0 +1,213 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Aptos', sans-serif;
+}
+
+@font-face {
+  font-family: 'Aptos';
+  src: url('fonts/Aptos.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Aptos';
+  src: url('fonts/Aptos-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Apply Aptos as the primary font */
+body {
+  font-family: 'Aptos', sans-serif;
+}
+
+/* Example application for headings and buttons */
+.hero-content h1 {
+  font-family: 'Aptos', sans-serif;
+  font-weight: 700;
+}
+
+.hero-content p {
+  font-family: 'Aptos', sans-serif;
+  font-weight: 400;
+}
+
+body {
+  background-color: #000; /* Black background */
+  color: #fff; /* White text */
+  line-height: 1.6;
+}
+
+/* Header Navigation */
+header {
+  background: #000; /* Black header */
+  padding: 20px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff; /* White logo */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff; /* White links */
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ccc; /* Light gray on hover */
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: #000; /* Black hero section */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  color: #fff; /* White text */
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #ccc; /* Light gray subtext */
+}
+
+.hero-content button {
+  padding: 10px 20px;
+  background-color: #fff; /* White button */
+  color: #000; /* Black text */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.hero-content button:hover {
+  background-color: #ccc; /* Light gray on hover */
+  color: #000;
+}
+
+/* Content Sections */
+.content-section {
+  padding: 100px 20px;
+  background-color: #000; /* Black background */
+}
+
+.content-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #fff; /* White heading */
+}
+
+.content-section p {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #ccc; /* Light gray text */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.features {
+  background: #111; /* Slightly lighter black */
+}
+
+.feature-grid {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.feature-item {
+  background: #1a1a1a; /* Dark gray box */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+  max-width: 300px;
+  text-align: center;
+}
+
+.feature-item h3 {
+  color: #fff; /* White headings */
+  margin-bottom: 10px;
+}
+
+.feature-item p {
+  color: #ccc; /* Light gray text */
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+form input, form textarea {
+  padding: 10px;
+  background-color: #111; /* Dark gray inputs */
+  border: 1px solid #ccc; /* Light gray borders */
+  border-radius: 5px;
+  color: #fff; /* White text */
+}
+
+form button {
+  padding: 10px;
+  background-color: #fff; /* White button */
+  color: #000; /* Black text */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #ccc; /* Light gray on hover */
+}
+
+/* Footer */
+footer {
+  padding: 20px;
+  background: #000; /* Black footer */
+  text-align: center;
+  color: #ccc; /* Light gray text */
+}
