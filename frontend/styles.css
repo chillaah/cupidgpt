@@ -183,10 +183,10 @@ form {
   margin: 0 auto;
 }
 
-form input, form textarea {
+form input {
   padding: 10px;
-  background-color: #111; /* Dark gray inputs */
-  border: 1px solid #ccc; /* Light gray borders */
+  background-color: #111; /* Dark gray background */
+  border: 1px solid #ccc; /* Light gray border */
   border-radius: 5px;
   color: #fff; /* White text */
 }

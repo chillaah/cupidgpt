@@ -12,17 +12,19 @@
       <div class="logo">CupidGPT</div>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
+        <li><a href="#survey">Survey</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section class="hero">
+    <!-- Hero section with id for scrolling -->
+    <section id="hero" class="hero">
       <div class="hero-content">
         <h1>GenAI Matchmaking Research</h1>
-        <p> </p>
-        <button onclick="scrollToSection('about')">Enter</button>
+        <p>Participate in our study and help us redefine AI in romance!</p>
+        <button onclick="scrollToSection('survey')">Dating Simulation</button>
       </div>
     </section>
 
@@ -30,6 +32,23 @@
       <div class="container">
         <h2>About CupidGPT</h2>
         <p><a href="https://www.qut.edu.au/research/study-with-us/vacation-research-experience-scheme-student-topics/vres/cupidgtp-or-love-bytes-a-turning-test-in-the-world-of-genai-matchmaking">Learn More</a></p>
+      </div>
+    </section>
+
+    <section id="survey" class="content-section">
+      <div class="container">
+        <h2>Imagine you are on a date with the potential love of your life, and they ask you...</h2>
+        &nbsp;
+        <form id="surveyForm" onsubmit="submitSurvey(event)">
+          <!-- Sample questions -->
+          <label for="answer">How do you usually start a conversation on a first date?</label>
+          <textarea type="text" name="answer" id="answer" placeholder="Type your answer here..." required></textarea>
+        
+          <label for="assignmentId">Your Assignment ID (if applicable):</label>
+          <input type="text" name="assignment_id" id="assignmentId" placeholder="Enter your Assignment ID" required>
+        
+          <button type="submit">Submit</button>
+        </form>    
       </div>
     </section>
 

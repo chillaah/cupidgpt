@@ -3,7 +3,7 @@ const db = new sqlite3.Database('./database.db');  // Change this path to your a
 
 // Create the table if it doesn't already exist
 db.serialize(() => {
-  db.run(`CREATE TABLE IF NOT EXISTS responses (
+  db.run(`CREATE TABLE IF NOT EXISTS survey_results (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     assignment_id TEXT,
     answer TEXT
