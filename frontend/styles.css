@@ -211,3 +211,14 @@ footer {
   text-align: center;
   color: #ccc; /* Light gray text */
 }
+
+/* Hyperlinks */
+a {
+  color: #ADD8E6; /* Light blue color */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #87CEFA; /* Slightly darker light blue on hover */
+}
