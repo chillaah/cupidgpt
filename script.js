@@ -54,3 +54,16 @@ function scrollToSection(sectionId) {
 document.querySelector('button').addEventListener('click', function () {
   scrollToSection('survey'); // Scroll to the survey section
 });
+
+function toggleAnswer(header) {
+  const answer = header.nextElementSibling; // The answer div directly after the header
+  const arrow = header.querySelector(".arrow"); // The arrow span within the header
+
+  const isVisible = answer.style.display === 'block';
+
+  // Toggle answer visibility
+  answer.style.display = isVisible ? 'none' : 'block';
+
+  // Rotate arrow direction
+  arrow.innerHTML = isVisible ? '▶️' : '🔽'; // Right arrow (▶) or Down arrow (▼)
+}

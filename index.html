@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CupidGPT | AI Matchmaking Redefined</title>
+  <title>CupidGPT</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/x-icon" href="openai.ico">
 </head>
 <body>
   <header>
     <nav>
       <div class="logo">CupidGPT</div>
       <ul class="nav-links">
-        <li><a href="#survey">Date-Sim</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -22,86 +22,118 @@
     <!-- Hero section -->
     <section id="hero" class="hero">
       <div class="hero-content">
-        <h1>GenAI Matchmaking Research</h1>
+        <h1>Generative AI Matchmaking Research</h1>
         <p>Participate in our study and help us redefine AI in romance!</p>
-        <button onclick="scrollToSection('survey')">Dating Simulation</button>
-      </div>
-    </section>
 
-    <!-- Survey section -->
-    <section id="survey" class="content-section">
-      <div class="container">
-        <h2>Imagine you are on the first date with the potential love of your life,<br>and they ask you...</h2>
-        &nbsp;
-        <form id="surveyForm" onsubmit="submitSurvey(event)">
-          <label for="answer">How do you usually start a conversation on a first date?</label>
-          <textarea type="text" name="answer" id="answer" placeholder="Type your answer here..." required></textarea>
-        
-          <label for="assignmentId">Your assignment ID (if applicable):</label>
-          <input type="text" name="assignment_id" id="assignmentId" placeholder="Enter your Assignment ID" required>
-        
-          <label>
-            <input type="checkbox" id="consentCheckbox" required>
-            I consent to participate in this research.
-          </label>
-        
-          <button type="submit">Submit</button>
-        </form>    
+        <!-- Card Layout -->
+        <div class="survey-cards">
+          
+          <!-- Dating Simulation Card -->
+          <div class="survey-card dating-simulation">
+            <h3>Dating Simulation</h3>
+            <p>Answer a few questions designed to mimic a romantic first date.</p>
+            <button onclick="window.open('simulation.html', '_blank')">
+              Participate <span class="new-tab-arrow">↗</span>
+            </button>
+          </div>
+
+          <!-- Turing Test Card -->
+          <div class="survey-card turing-test">
+            <h3>Turing Test</h3>
+            <p>Compare human and AI-generated responses and determine which is which.</p>
+            <button onclick="window.open('turing.html', '_blank')">
+              Participate <span class="new-tab-arrow">↗</span>
+            </button>
+          </div>
+        </div>
       </div>
     </section>
+  </main>
 
     <!-- FAQ section -->
     <section id="faq" class="content-section">
       <div class="container">
         <h2>FAQ</h2>
         <div class="faq-item">
-          <h3>Why is the study being conducted?</h3>
-          This research project is being undertaken as part of a study by Dr. Alan Woodley and Chiran Walisundara.<br>
-          Imagine you are on a TV dating show. You stand on one side of a curtain and ask possible suitors some questions.<br>
-          After hearing their answers, you have to choose which suitor you'd like to go on a date with.<br>
-          However, one of the suitors is an AI machine. Do you think you could tell the difference?<br>
-          The purpose of this project is to see how many people can distinguish between a human and a machine.
+          <h3 onclick="toggleAnswer(this)">
+            <span class="arrow">▶️</span> What is this research project about?
+          </h3>
+          <div class="faq-answer">
+            This research project is being undertaken as part of a study by Dr. Alan Woodley and Chiran Walisundara.<br>
+            Imagine you are on a TV dating show. You stand on one side of a curtain and ask possible suitors some questions.<br>
+            After hearing their answers, you have to choose which suitor you'd like to go on a date with.<br>
+            However, one of the suitors is an AI machine. Do you think you could tell the difference?<br>
+            The purpose of this project is to see how many people can distinguish between a human and a machine.
+          </div>
         </div>
         &nbsp;
         <div class="faq-item">
-          <h3>What does participation involve?</h3>
-          There are two ways to participate:<br>
-          1. Answer typical ‘first-date’ type questions, like “Describe your idea of a perfect date.”<br>
-          2. Read two prepared answers for a single question and compare them. Decide which answer is the most romantic or fun and identify which was written by a human or AI.<br>
-          Your participation is entirely voluntary. You can withdraw at any time without penalty.
+          <h3 onclick="toggleAnswer(this)">
+            <span class="arrow">▶️</span> What does participation involve?
+          </h3>
+          <div class="faq-answer">
+            There are two ways to participate:<br>
+            1. Answer typical ‘first-date’ type questions, like “Describe your idea of a perfect date.”<br>
+            2. Read two prepared answers for a single question and compare them. Decide which answer is the most romantic or fun and identify which was written by a human or AI.<br>
+            Your participation is entirely voluntary. You can withdraw at any time without penalty.
+          </div>
         </div>
         &nbsp;
         <div class="faq-item">
-          <h3>What are the possible benefits for me if I take part?</h3>
-          This research is unlikely to benefit you directly.<br>
-          However, it may benefit society by highlighting if people are susceptible to romance scams.
+          <h3 onclick="toggleAnswer(this)">
+            <span class="arrow">▶️</span> What are the possible benefits of taking part?
+          </h3>
+          <div class="faq-answer">
+            This research is unlikely to benefit you directly.<br>
+            However, it may benefit society by highlighting if people are susceptible to romance scams.
+          </div>
         </div>
         &nbsp;
         <div class="faq-item">
-          <h3>What are the possible risks for me if I take part?</h3>
-          There are no risks beyond normal day-to-day living associated with this project.
+          <h3 onclick="toggleAnswer(this)">
+            <span class="arrow">▶️</span> Are there any risks involved?
+          </h3>
+          <div class="faq-answer">
+            There are no risks beyond normal day-to-day living associated with this project.
+          </div>
         </div>
         &nbsp;
         <div class="faq-item">
-          <h3>What about privacy and confidentiality?</h3>
-          The research team will record your gender and age bracket. Personal identifying information will not be collected.<br>
-          Data will be securely stored as per QUT policies and kept for a minimum of 5 years.
+          <h3 onclick="toggleAnswer(this)">
+            <span class="arrow">▶️</span> How will my data be used?
+          </h3>
+          <div class="faq-answer">
+            The research team will record your gender and age bracket. Personal identifying information will not be collected.<br>
+            Data will be securely stored as per QUT policies and kept for a minimum of 5 years.
+          </div>  
         </div>
         &nbsp;
         <div class="faq-item">
-          <h3>How do I give my consent to participate?</h3>
-          Indicate your consent by ticking the checkbox on the form.
+          <h3 onclick="toggleAnswer(this)">
+            <span class="arrow">▶️</span> How will my privacy be protected?
+          </h3>
+          <div class="faq-answer">
+            Indicate your consent by ticking the checkbox on the form.
+          </div>  
         </div>
         &nbsp;
         <div class="faq-item">
-          <h3>What if I have questions about the research project?</h3>
-          Contact Alan Woodley at <a href="mailto:a.woodley@qut.edu.au">a.woodley@qut.edu.au</a>.
+          <h3 onclick="toggleAnswer(this)">
+            <span class="arrow">▶️</span> What if I have a question about the research project?
+          </h3>
+          <div class="faq-answer">
+            Contact Alan Woodley at <a href="mailto:a.woodley@qut.edu.au">a.woodley@qut.edu.au</a>.
+          </div>
         </div>
         &nbsp;
         <div class="faq-item">
-          <h3>What if I have a concern or complaint regarding the conduct of the research project?</h3>
-          QUT is committed to ethical research.<br>
-          If you have concerns, contact the QUT Research Ethics Advisory Team at <a href="tel:+61731385123">+(61)731385123</a> or <a href="mailto:humanethics@qut.edu.au">humanethics@qut.edu.au</a>.
+          <h3 onclick="toggleAnswer(this)">
+            <span class="arrow">▶️</span> What if I have a complaint or concern about the research project?
+          </h3>
+          <div class="faq-answer">
+            QUT is committed to ethical research.<br>
+            If you have concerns, contact the QUT Research Ethics Advisory Team at <a href="tel:+61731385123">+(61)731385123</a> or <a href="mailto:humanethics@qut.edu.au">humanethics@qut.edu.au</a>.
+          </div>
         </div>
       </div>
     </section>    
@@ -109,7 +141,7 @@
     <!-- Contact section -->
     <section id="contact" class="content-section">
       <div class="container">
-        <h2>Research Team</h2>
+        <h2>Contact</h2>
         <div class="faq-item">
           <h3>Principal Researcher:</h3>
           Alan Woodley<br>
@@ -132,7 +164,7 @@
 
   <footer>
     <div class="container">
-      <p>&copy; cupidgpt 2024</p>
+      <p>&copy; CupidGPT 2024</p>
     </div>
   </footer>
 

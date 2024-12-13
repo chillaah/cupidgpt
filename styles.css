@@ -8,14 +8,14 @@
 
 @font-face {
   font-family: 'Aptos';
-  src: url('fonts/Aptos.ttf') format('truetype');
+  src: url('fonts/InterDisplay-Light.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Aptos';
-  src: url('fonts/Aptos-Bold.ttf') format('truetype');
+  src: url('fonts/InterDisplay-Light.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
 }
@@ -221,4 +221,151 @@ a {
 a:hover {
   text-decoration: underline;
   color: #87CEFA; /* Slightly darker light blue on hover */
+}
+
+.faq-answer {
+  display: none; /* Initially hide the answers */
+  margin-top: 10px;
+  font-size: 1em;
+  color: #FFF;
+}
+
+.faq-item h3 {
+  cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
+  user-select: none;
+  display: flex;
+  align-items: center;
+}
+
+.faq-item .arrow {
+  margin-right: 10px;
+  transition: transform 0.3s ease; /* Smooth rotation animation */
+}
+
+.faq-item h3:hover {
+  color: #007BFF; /* Optional: Add a hover effect */
+}
+
+/* Styling for card layout */
+.survey-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.survey-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 2rem;
+  height: 300px;
+  width: 350px;
+  color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1;
+}
+
+.survey-card.dating-simulation::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, #ff80ab, #f06292, #ba68c8, #ff8a65, #e91e63, #ff80ab);
+  background-size: 400% 400%;
+  z-index: -1;
+  animation: gradientShiftPink 8s infinite linear;
+}
+
+.survey-card.turing-test::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, #ff6f61, #ffcc00, #4caf50, #42a5f5, #ab47bc, #ff6f61);
+  background-size: 400% 400%;
+  z-index: -1;
+  animation: gradientShift 8s infinite linear;
+}
+
+.survey-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.survey-card h3 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.survey-card p {
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.survey-card button {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #333;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.survey-card button:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #000;
+}
+
+.survey-card button .new-tab-arrow {
+  margin-left: 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* Gradient animations */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradientShiftPink {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .survey-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .survey-card {
+    width: 90%;
+    height: auto;
+  }
 }
